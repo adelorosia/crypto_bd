@@ -1,0 +1,26 @@
+### Register User
+POST http://localhost:3003/api/users/register
+Content-Type: application/json
+
+{
+    "firstName":"Adel",
+    "lastName":"Namazi",
+    "gender":"male",
+    "email":"adel_orosia@yahoo.com",
+    "password":"1234"
+}
+
+### Login User
+POST http://localhost:3003/api/users/login
+Content-Type: application/json
+
+{
+    "email":"adel_orosia@yahoo.com",
+    "password":"1234"
+}
+
+### Refresh Token
+GET http://localhost:3003/api/token
+
+### Get All Users
+GET http://localhost:3003/api/users
