@@ -3,11 +3,66 @@ POST http://localhost:3003/api/users/register
 Content-Type: application/json
 
 {
-    "firstName":"Adel",
-    "lastName":"Namazi",
+    "firstName":"Behdad",
+    "lastName":"Mirbani",
     "gender":"male",
-    "email":"adel_orosia@yahoo.com",
-    "password":"1234"
+    "email":"behdad_mirbani@yahoo.com",
+    "password":"1234",
+    "confirmPassword":"1234"
+}
+
+### Logout User
+DELETE http://localhost:3003/api/users/logout
+
+
+### Change Password Wenn User is Login
+PUT http://localhost:3003/api/users/change_password
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWMxZmY2YjljMWU4MjAxMzY3MGNjNTAiLCJmaXJzdE5hbWUiOiJBZGVsIiwibGFzdE5hbWUiOiJPcm9zaWEiLCJlbWFpbCI6ImFkZWxfb3Jvc2lhQHlhaG9vLmNvbSIsInBob3RvIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDE3LzE3OC81NzAvb3JpZ2luYWwvbWFsZS1zeW1ib2wtaXNvbGF0ZWQtaWNvbi1vbi10cmFuc3BhcmVudC1iYWNrZ3JvdW5kLWZyZWUtcG5nLnBuZyIsImlzQWRtaW4iOnRydWUsImJpbyI6ImkgYW0gYWRlbCBuYW1hemkiLCJpYXQiOjE3MDczMDcyMzUsImV4cCI6MTcwNzMwNzI2NX0.LNf6LQUjeJv6vIIoKPPoGHbWiZL0YuAPy2V-DFantBI
+Content-Type: application/json
+
+{
+    "currentPassword":"1234",
+    "newPassword":"1234",
+    "confirmPassword":"1234"
+}
+
+### Block User
+PUT http://localhost:3003/api/users/block
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWMxZmY2YjljMWU4MjAxMzY3MGNjNTAiLCJmaXJzdE5hbWUiOiJBZGVsIiwibGFzdE5hbWUiOiJOYW1hemkiLCJlbWFpbCI6ImFkZWxfb3Jvc2lhQHlhaG9vLmNvbSIsInBob3RvIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDE3LzE3OC81NzAvb3JpZ2luYWwvbWFsZS1zeW1ib2wtaXNvbGF0ZWQtaWNvbi1vbi10cmFuc3BhcmVudC1iYWNrZ3JvdW5kLWZyZWUtcG5nLnBuZyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcwNzIxNzczNCwiZXhwIjoxNzA3MjE3NzY0fQ.yaTsw894C3xm66QgmV1LR2CssD4Gvt0T3r-jwN8IMJ0
+Content-Type: application/json
+
+{
+    "targetUserId":"65c211b29b82f96af6fa9b4a"
+}
+
+### UnBlock User
+PUT http://localhost:3003/api/users/unblock
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWMxZmY1NTljMWU4MjAxMzY3MGNjNGIiLCJmaXJzdE5hbWUiOiJBbWluIiwibGFzdE5hbWUiOiJSb3VtaSIsImVtYWlsIjoiYW1pbl9yb3VtaUB5YWhvby5jb20iLCJwaG90byI6Imh0dHBzOi8vc3RhdGljLnZlY3RlZXp5LmNvbS9zeXN0ZW0vcmVzb3VyY2VzL3ByZXZpZXdzLzAxNy8xNzgvNTcwL29yaWdpbmFsL21hbGUtc3ltYm9sLWlzb2xhdGVkLWljb24tb24tdHJhbnNwYXJlbnQtYmFja2dyb3VuZC1mcmVlLXBuZy5wbmciLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzA3MjIzNDAzLCJleHAiOjE3MDcyMjM0MzN9.sHXy8vUrmoSvlF8ol_VyxBgRMmrYoI3_WGq5IT2dlPo
+Content-Type: application/json
+
+{
+    "targetUserId":"65c211b29b82f96af6fa9b4a"
+}
+
+### Delete Account
+DELETE http://localhost:3003/api/users/delete_account
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWMyMmQwYzViZDYwZmY3N2UzNWU2NjgiLCJmaXJzdE5hbWUiOiJHaG9sYW0iLCJsYXN0TmFtZSI6IkthcmltaSIsImVtYWlsIjoiZ2hvbGFtX2thcmltaUB5YWhvby5jb20iLCJwaG90byI6Imh0dHBzOi8vc3RhdGljLnZlY3RlZXp5LmNvbS9zeXN0ZW0vcmVzb3VyY2VzL3ByZXZpZXdzLzAxNy8xNzgvNTcwL29yaWdpbmFsL21hbGUtc3ltYm9sLWlzb2xhdGVkLWljb24tb24tdHJhbnNwYXJlbnQtYmFja2dyb3VuZC1mcmVlLXBuZy5wbmciLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzA3MjI0Mzc3LCJleHAiOjE3MDcyMjQ0MDd9.Q3Eh1hW3Es1zxsgnWXf54go5-KHGE5ZCIft_mjiHFXY
+Content-Type: application/json
+
+{
+    "targetUserId":"65c1ff6b9c1e82013670cc50"
+}
+
+### Edit Profile Info
+PUT http://localhost:3003/api/users/edit_profile_info
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWMxZmY2YjljMWU4MjAxMzY3MGNjNTAiLCJmaXJzdE5hbWUiOiJBZGVsIiwibGFzdE5hbWUiOiJOYW1hemkiLCJlbWFpbCI6ImFkZWxfb3Jvc2lhQHlhaG9vLmNvbSIsInBob3RvIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDE3LzE3OC81NzAvb3JpZ2luYWwvbWFsZS1zeW1ib2wtaXNvbGF0ZWQtaWNvbi1vbi10cmFuc3BhcmVudC1iYWNrZ3JvdW5kLWZyZWUtcG5nLnBuZyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcwNzIzMjkxNCwiZXhwIjoxNzA3MjMyOTQ0fQ.l3Ekbn4NzYvtKsaKKKiP54tEsG3MXkJ9cvxBB1f3ZyU
+Content-Type: application/json
+
+{
+    "firstName":"Adel",
+    "lastName":"Orosia",
+    "gender":"male",
+    "bio":"i am adel namazi"
 }
 
 ### Login User
@@ -17,6 +72,24 @@ Content-Type: application/json
 {
     "email":"adel_orosia@yahoo.com",
     "password":"1234"
+}
+
+### Follow User
+POST http://localhost:3003/api/users/follow
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWMxZmY2YjljMWU4MjAxMzY3MGNjNTAiLCJmaXJzdE5hbWUiOiJBZGVsIiwibGFzdE5hbWUiOiJPcm9zaWEiLCJlbWFpbCI6ImFkZWxfb3Jvc2lhQHlhaG9vLmNvbSIsInBob3RvIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDE3LzE3OC81NzAvb3JpZ2luYWwvbWFsZS1zeW1ib2wtaXNvbGF0ZWQtaWNvbi1vbi10cmFuc3BhcmVudC1iYWNrZ3JvdW5kLWZyZWUtcG5nLnBuZyIsImlzQWRtaW4iOnRydWUsImJpbyI6ImkgYW0gYWRlbCBuYW1hemkiLCJpYXQiOjE3MDczMDYwNTksImV4cCI6MTcwNzMwNjA4OX0.ljLZiycVteyfIY1O3FWRMpWHmCcWpe8YZkLeeeiWGrw
+Content-Type: application/json
+
+{
+    "targetUserId":"65c36c35d389e2812c339e58"
+}
+
+### UnFollow User
+POST http://localhost:3003/api/users/unfollow
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWMxZmY2YjljMWU4MjAxMzY3MGNjNTAiLCJmaXJzdE5hbWUiOiJBZGVsIiwibGFzdE5hbWUiOiJPcm9zaWEiLCJlbWFpbCI6ImFkZWxfb3Jvc2lhQHlhaG9vLmNvbSIsInBob3RvIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDE3LzE3OC81NzAvb3JpZ2luYWwvbWFsZS1zeW1ib2wtaXNvbGF0ZWQtaWNvbi1vbi10cmFuc3BhcmVudC1iYWNrZ3JvdW5kLWZyZWUtcG5nLnBuZyIsImlzQWRtaW4iOnRydWUsImJpbyI6ImkgYW0gYWRlbCBuYW1hemkiLCJpYXQiOjE3MDczMDgzMTQsImV4cCI6MTcwNzMwODM0NH0.ggZvx5E34RDwY8uLSdAGMiyO4EJUyqW5O5Dz-pjpnKo
+Content-Type: application/json
+
+{
+    "targetUserId":"65c22d0c5bd60ff77e35e668"
 }
 
 ### Refresh Token
