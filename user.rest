@@ -3,10 +3,10 @@ POST http://localhost:3003/api/users/register
 Content-Type: application/json
 
 {
-    "firstName":"Behdad",
-    "lastName":"Mirbani",
+    "firstName":"Adel",
+    "lastName":"Namazi",
     "gender":"male",
-    "email":"behdad_mirbani@yahoo.com",
+    "email":"adel_orosia@yahoo.com",
     "password":"1234",
     "confirmPassword":"1234"
 }
@@ -46,11 +46,11 @@ Content-Type: application/json
 
 ### Delete Account
 DELETE http://localhost:3003/api/users/delete_account
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWMyMmQwYzViZDYwZmY3N2UzNWU2NjgiLCJmaXJzdE5hbWUiOiJHaG9sYW0iLCJsYXN0TmFtZSI6IkthcmltaSIsImVtYWlsIjoiZ2hvbGFtX2thcmltaUB5YWhvby5jb20iLCJwaG90byI6Imh0dHBzOi8vc3RhdGljLnZlY3RlZXp5LmNvbS9zeXN0ZW0vcmVzb3VyY2VzL3ByZXZpZXdzLzAxNy8xNzgvNTcwL29yaWdpbmFsL21hbGUtc3ltYm9sLWlzb2xhdGVkLWljb24tb24tdHJhbnNwYXJlbnQtYmFja2dyb3VuZC1mcmVlLXBuZy5wbmciLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzA3MjI0Mzc3LCJleHAiOjE3MDcyMjQ0MDd9.Q3Eh1hW3Es1zxsgnWXf54go5-KHGE5ZCIft_mjiHFXY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWMzYzgxOTFlMDYxNTZjMzcwMTcyZmMiLCJmaXJzdE5hbWUiOiJBZGVsIiwibGFzdE5hbWUiOiJOYW1hemkiLCJlbWFpbCI6ImFkZWxfb3Jvc2lhQHlhaG9vLmNvbSIsInBob3RvIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDE3LzE3OC81NzAvb3JpZ2luYWwvbWFsZS1zeW1ib2wtaXNvbGF0ZWQtaWNvbi1vbi10cmFuc3BhcmVudC1iYWNrZ3JvdW5kLWZyZWUtcG5nLnBuZyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDczNDI1MTUsImV4cCI6MTcwNzM0MjU0NX0.YW9RngCf6bgeE5KsflTL1sND6kYrJgqjckwR0L1SpXo
 Content-Type: application/json
 
 {
-    "targetUserId":"65c1ff6b9c1e82013670cc50"
+    "targetUserId":"65c3c8191e06156c370172fc"
 }
 
 ### Edit Profile Info
@@ -76,11 +76,11 @@ Content-Type: application/json
 
 ### Follow User
 POST http://localhost:3003/api/users/follow
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWMxZmY2YjljMWU4MjAxMzY3MGNjNTAiLCJmaXJzdE5hbWUiOiJBZGVsIiwibGFzdE5hbWUiOiJPcm9zaWEiLCJlbWFpbCI6ImFkZWxfb3Jvc2lhQHlhaG9vLmNvbSIsInBob3RvIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDE3LzE3OC81NzAvb3JpZ2luYWwvbWFsZS1zeW1ib2wtaXNvbGF0ZWQtaWNvbi1vbi10cmFuc3BhcmVudC1iYWNrZ3JvdW5kLWZyZWUtcG5nLnBuZyIsImlzQWRtaW4iOnRydWUsImJpbyI6ImkgYW0gYWRlbCBuYW1hemkiLCJpYXQiOjE3MDczMDYwNTksImV4cCI6MTcwNzMwNjA4OX0.ljLZiycVteyfIY1O3FWRMpWHmCcWpe8YZkLeeeiWGrw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWMzZmIyMDQwZGExOWQ3YzM0ZjI4ZTgiLCJmaXJzdE5hbWUiOiJBZGVsIiwibGFzdE5hbWUiOiJOYW1hemkiLCJlbWFpbCI6ImFkZWxfb3Jvc2lhQHlhaG9vLmNvbSIsInBob3RvIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDE3LzE3OC81NzAvb3JpZ2luYWwvbWFsZS1zeW1ib2wtaXNvbGF0ZWQtaWNvbi1vbi10cmFuc3BhcmVudC1iYWNrZ3JvdW5kLWZyZWUtcG5nLnBuZyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDczNDI2NjksImV4cCI6MTcwNzM0MjY5OX0.XX3rTF4ffdBPdsY2DbRDguR5u_LXsMJrpUz9sJQ4Dmw
 Content-Type: application/json
 
 {
-    "targetUserId":"65c36c35d389e2812c339e58"
+    "targetUserId":"65c3fb0240da19d7c34f28e5"
 }
 
 ### UnFollow User

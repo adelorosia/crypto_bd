@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors";
 import { dbConnect } from "./config/dbConnect.js";
 import userRouter from "./routes/userRouter.js";
 import { errorHandler, notFound } from "./middlewares/errors/errorHandler.js";
@@ -10,12 +11,13 @@ dbConnect();
 
 const app = express();
 
-app.use(express.json())
-app.use(cookieParser())
-app.use(userRouter)
+app.use(express.json());
+app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cookieParser());
+app.use(userRouter);
 
-app.use(notFound)
-app.use(errorHandler)
+app.use(notFound);
+app.use(errorHandler);
 
 const port = process.env.PORT || 3005;
 
